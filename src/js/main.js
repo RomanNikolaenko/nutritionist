@@ -12,6 +12,11 @@
 
 // import './helpers/bounding-client-rect';
 
+// import counter from './libs/counter';
+// import { useDynamicAdapt } from './libs/adaptive.js';
+
+// useDynamicAdapt();
+
 import BaseHelpers from './helpers/base-helpers';
 import PopupManager from './modules/popup-manager';
 import BurgerMenu from './modules/burger-menu';

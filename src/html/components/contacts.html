@@ -1,0 +1,66 @@
+<section class="contacts">
+    <div class="contacts__container">
+        <div class="contacts__left">
+            <div class="contacts__left-wrap">
+                <div class="contacts__image ">
+                    <img src="../../images/contacts.jpg" width="409"
+                        height="451"
+                        alt class="contacts__lady">
+                    <img src="../../images/contacts.png" width="296"
+                        height="296"
+                        alt class="contacts__fruit">
+                </div>
+                <div class="contacts__name">
+                    <h3>Світлана Олійник</h3>
+                </div>
+            </div>
+
+            <div class="contacts__left-inner">
+                <a href="tel:+380676076007"
+                    class="contacts__link contacts__phone">
+                    <svg width="14" height="14">
+                        <use href="./images/sprite.svg#phone" />
+                    </svg>
+                    +380 67 607 60 07
+                </a>
+                <a href="mailto:infoname@gmail.com"
+                    class="contacts__link contacts__email">
+                    <svg width="15" height="12">
+                        <use href="./images/sprite.svg#email" />
+                    </svg>
+                    infoname@gmail.com
+                </a>
+            </div>
+        </div>
+        <div class="contacts__right">
+            <span class="contacts__connect">Зв'язатися зі мною</span>
+            <h2 class="contacts__title">
+                З будь-яких питань пов'язаних
+                з вашим здоров'ям та його поліпшенням я з радістю готова вам
+                допомогти і буду рада, якщо ваше життя стане кращим
+            </h2>
+            <form action="#" class="contacts__form form-contacts">
+                <label class="form-contacts__label">
+                    <input type="text" name="name" class="form-contacts__input"
+                        placeholder="Як вас звати? *">
+                </label>
+                <label class="form-contacts__label">
+                    <input type="text" name="phone" class="form-contacts__input"
+                        placeholder="Який ваш номер телефону? *">
+                </label>
+                <label class="form-contacts__label">
+                    <input type="text" name="email" class="form-contacts__input"
+                        placeholder="Яка ваша пошта?">
+                </label>
+
+                @@include('../ui/button-rounded.html', {
+                "title": 'Записатися'
+                })
+            </form>
+        </div>
+
+        <div class="contacts__socials">
+            @@include('./lets-be-friends.html')
+        </div>
+    </div>
+</section>

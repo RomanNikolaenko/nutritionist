@@ -3,22 +3,34 @@
   justify-content: center;
   align-items: center;
   gap: rem(6);
-  width: rem(200);
-  height: rem(200);
+  width: rem(150);
+  height: rem(150);
   border: 1px solid #ffffff;
   box-shadow: 0px 3px 10px 0px #1f211d24;
   background-color: var(--lightBlue);
   color: #ffffff;
   border-radius: 50%;
-  font-size: rem(19);
+  font-size: rem(16);
   font-weight: 500;
   font-family: var(--Montserrat);
   line-height: 1;
   letter-spacing: em(0.3);
   text-wrap: balance;
   padding: rem(10);
-  transform: rotate(-10deg);
+  transform: rotate(-15deg);
   transition: all var(--bs-transition);
+
+  @media (min-width: 768px) {
+    font-size: rem(18);
+    width: rem(180);
+    height: rem(180);
+  }
+
+  @media (min-width: 1200px) {
+    font-size: rem(19);
+    width: rem(200);
+    height: rem(200);
+  }
 
   @include interactive {
     transform: rotate(0deg);
