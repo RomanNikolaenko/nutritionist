@@ -1,0 +1,129 @@
+.burger {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  background: #798f994d;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  overflow: hidden;
+  pointer-events: none;
+  visibility: hidden;
+  transition: all var(--bs-transition);
+
+  .menu-open & {
+    opacity: 1;
+    pointer-events: all;
+    visibility: visible;
+  }
+
+  &__backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__wrap {
+    position: relative;
+    z-index: 1;
+    padding: 0 rem(20) rem(24);
+    max-width: rem(384);
+    width: calc(100% - rem(20));
+    max-height: 100%;
+    overflow-y: overlay;
+    background-color: #f7f6f3;
+    border-radius: 0 rem(20) rem(20) 0;
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: all var(--bs-transition);
+
+    .menu-open & {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  &__header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: rem(20);
+    background-color: #f7f6f3;
+    padding-top: rem(24);
+    padding-bottom: rem(24);
+    margin-bottom: rem(24);
+    border-bottom: 1px solid var(--line40);
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: rem(23);
+  }
+
+  &__text {
+    display: grid;
+    gap: rem(16);
+    font-family: var(--Montserrat);
+    font-size: rem(14);
+    line-height: prc(16.8, 14);
+    margin-top: rem(13);
+  }
+
+  &__kruglov {
+    font-family: var(--Montserrat);
+    font-size: rem(15);
+    padding-bottom: rem(21);
+    color: var(--text);
+
+    @media (min-width: 768px) {
+      padding-bottom: rem(39);
+    }
+
+    &-link {
+      position: relative;
+      font-weight: 500;
+      color: var(--text);
+
+      @include pseudo-cell(before) {
+        top: calc(100%);
+        left: 0;
+        background-color: var(--line65);
+        width: 100%;
+        height: rem(1);
+        transition: width var(--bs-transition);
+      }
+
+      @include interactive {
+        &::before {
+          width: 60%;
+        }
+      }
+    }
+  }
+
+  .btn-connect {
+    max-width: 100%;
+    font-size: rem(18);
+    line-height: prc(14.4, 18);
+  }
+
+  .lets-be-friends {
+    width: 100%;
+    margin-bottom: rem(9);
+    padding-bottom: rem(29);
+    border-bottom: 1px solid var(--line40);
+
+    @media (min-width: 768px) {
+      margin-top: rem(19);
+    }
+  }
+}

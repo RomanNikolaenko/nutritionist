@@ -1,0 +1,132 @@
+.btn-rounded {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: rem(6);
+  width: rem(200);
+  height: rem(200);
+  border: 1px solid #ffffff;
+  box-shadow: 0px 3px 10px 0px #1f211d24;
+  background-color: var(--lightBlue);
+  color: #ffffff;
+  border-radius: 50%;
+  font-size: rem(19);
+  font-weight: 500;
+  font-family: var(--Montserrat);
+  line-height: 1;
+  letter-spacing: em(0.3);
+  text-wrap: balance;
+  padding: rem(10);
+  transform: rotate(-10deg);
+  transition: all var(--bs-transition);
+
+  @include interactive {
+    transform: rotate(0deg);
+    box-shadow: 0px 0px 10px 0px rgba(31, 33, 29, 0.3);
+  }
+
+  svg {
+    width: rem(14);
+    height: rem(12);
+    flex: 0 0 auto;
+  }
+}
+
+.button-line {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: rem(6);
+  font-weight: 500;
+  font-size: rem(16);
+  font-family: Montserrat, sans-serif;
+  letter-spacing: em(0.3);
+  line-height: 1;
+  color: var(--darkBlue);
+  background-color: transparent;
+
+  @include pseudo-cell(before) {
+    top: calc(100%);
+    left: 0;
+    background-color: var(--line65);
+    width: calc(100% - rem(18));
+    height: rem(1);
+    transition: width var(--bs-transition);
+  }
+
+  @include interactive {
+    &::before {
+      width: 60%;
+    }
+  }
+
+  svg {
+    width: rem(12);
+    height: rem(10);
+    flex: 0 0 auto;
+  }
+}
+
+.btn-connect {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: rem(10);
+  width: 100%;
+  max-width: rem(214);
+  border: 1px solid #ffffff;
+  border-radius: 100vmax;
+  font-size: rem(16);
+  font-family: var(--Montserrat);
+  letter-spacing: em(0.3);
+  background-color: var(--lightBlue);
+  color: #ffffff;
+  box-shadow: 0px 3px 4px 0px #1f211d0a;
+  padding: rem(10);
+  min-height: rem(42);
+  transition: all var(--bs-transition);
+
+  @include interactive {
+    border-color: var(--lightBlue);
+    background-color: #ffffff;
+    color: var(--lightBlue);
+  }
+
+  svg {
+    width: rem(13);
+    height: rem(11);
+    flex: 0 0 auto;
+  }
+}
+
+.btn-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: rem(38);
+  height: rem(38);
+  border-radius: 50%;
+  background-color: #ffffff;
+  color: var(--lightBlue);
+  padding: rem(11);
+  box-shadow: 0px 0px 9px 0px #25272214;
+  transition: all var(--bs-transition);
+
+  @media (min-width: 768px) {
+    width: rem(44);
+    height: rem(44);
+    padding: rem(13);
+  }
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  @include interactive {
+    background-color: var(--lightBlue);
+    color: #ffffff;
+  }
+}

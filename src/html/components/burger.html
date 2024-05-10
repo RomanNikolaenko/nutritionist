@@ -1,0 +1,50 @@
+<div class="burger" data-close-burger data-lp>
+    <div class="burger__backdrop" data-close-burger></div>
+    <div class="burger__wrap">
+        <div class="burger__header">
+            <a href="/" class="header__logo">
+                <span class="visually-hidden">logo</span>
+                <svg width="230" height="68">
+                    <use href="./images/sprite.svg#logo" />
+                </svg>
+            </a>
+
+            @@include('../ui/button-close.html', {
+            "dataType": "data-close-burger",
+            "class": "btn-close"
+            })
+        </div>
+        <div class="burger__body">
+            @@include('../ui/button-line.html', {
+            "link": 'cources.html',
+            "title": 'Навчання'
+            })
+
+            @@include('../components/nav.html')
+
+            <div class="burger__text">
+                <p>Поглиблені персональнi консультації з нутриціології, якi
+                    допоможуть вам досягти витриманого здоров'я та життєвої
+                    енергії</p>
+            </div>
+
+            @@include('../ui/button-connect.html', {
+            "title": "Зв'язатися зі мною",
+            "btn": true
+            })
+
+            @@include('./lets-be-friends.html')
+
+            <div class="burger__kruglov">
+                <span>Розробка сайту:</span>
+                <a
+                    href="https://www.instagram.com/boris__kruglov/"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    class="burger__kruglov-link">
+                    kruglov-design
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
